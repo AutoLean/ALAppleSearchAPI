@@ -69,6 +69,7 @@
 				D3CE9FD91A43220000B205DE /* ALAppleSearchAPITests */,
 				D3CE9FBB1A4321FF00B205DE /* Products */,
 			);
+			indentWidth = 3;
 			sourceTree = "<group>";
 		};
 		D3CE9FBB1A4321FF00B205DE /* Products */ = {
