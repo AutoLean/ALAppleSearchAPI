@@ -19,11 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
 //   Example of using the parameters
+   NSString *term = @"over";
+   
    NSDictionary *parameters = [NSDictionary new];
-//   parameters = @{@"limit":@"200"};
+   parameters = @{@"limit":@"200",@"entity":@"software"};
    
    ALAAPLSearchAPIOperationManager *manager = [ALAAPLSearchAPIOperationManager manager];
-   [manager searchSoftwareWithTerm:@"over" parameters:parameters complete:^(id result, NSError *error) {
+   [manager searchSoftwareWithTerm:term parameters:parameters complete:^(id result, NSError *error) {
       NSLog(@"%@", result);
    }];
    

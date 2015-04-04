@@ -15,7 +15,7 @@
 - (void)searchSoftwareWithTerm:(NSString *)term
                     parameters:(NSDictionary *)parameters
                       complete:(void (^)(id, NSError *))block {
-   [self GET:[NSString stringWithFormat:@"%@/search?resultCount=100&term=%@&entity=software", SearchAPIURL, [term stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+   [self GET:[NSString stringWithFormat:@"%@/search?term=%@", SearchAPIURL, [term stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
                              parameters:parameters
                                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                    NSDictionary *result = responseObject;
